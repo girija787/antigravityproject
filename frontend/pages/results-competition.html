@@ -9,11 +9,11 @@
     .results-nav a{padding:14px 20px;font-size:0.88rem;font-weight:600;color:var(--gray-600);border-bottom:3px solid transparent;white-space:nowrap;transition:var(--transition);}
     .results-nav a:hover,.results-nav a.active{color:var(--orange);border-bottom-color:var(--orange);background:var(--orange-light);}
     .map-frame{width:100%;height:450px;border:none;border-radius:var(--radius-md);}
-    .comp-table{width:100%;border-collapse:collapse;font-size:0.88rem;}
-    .comp-table th{background:var(--navy);color:white;padding:12px 14px;text-align:left;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
-    .comp-table td{padding:12px 14px;border-bottom:var(--border);vertical-align:top;}
+    .comp-table{width:100%;border-collapse:collapse;font-size:0.85rem;}
+    .comp-table th{background:var(--navy);color:white;padding:11px 13px;text-align:left;font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
+    .comp-table td{padding:11px 13px;border-bottom:var(--border);vertical-align:top;font-size:0.85rem;}
     .comp-table tr:hover td{background:var(--gray-100);}
-    .comp-gap{color:var(--orange);font-weight:600;font-size:0.82rem;}
+    .comp-gap{color:var(--red);font-weight:600;font-size:0.82rem;}
     .comp-pro{color:var(--green);font-weight:600;font-size:0.82rem;}
     .map-info-box{background:var(--navy);color:white;padding:14px 18px;border-radius:var(--radius-sm);font-size:0.82rem;margin-bottom:12px;display:flex;gap:10px;align-items:flex-start;}
   </style>
@@ -22,14 +22,8 @@
   <nav class="navbar">
     <div class="navbar-inner">
       <a href="../index.html" class="logo"><div class="logo-icon">🌱</div>Vyapaar Vikash</a>
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li><li><a href="analyze.html">New Analysis</a></li>
-        <li><a href="advisor.html">AI Advisor</a></li><li><a href="dashboard.html">Dashboard</a></li>
-      </ul>
-      <div class="d-flex gap-sm">
-        <a href="analyze.html" class="btn btn-primary btn-sm">+ New Analysis</a>
-        <a href="login.html" class="btn btn-outline btn-sm">Logout</a>
-      </div>
+      <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="analyze.html">New Analysis</a></li><li><a href="advisor.html">AI Advisor</a></li><li><a href="dashboard.html">Dashboard</a></li></ul>
+      <div class="d-flex gap-sm"><a href="analyze.html" class="btn btn-primary btn-sm">+ New Analysis</a><a href="login.html" class="btn btn-outline btn-sm">Logout</a></div>
     </div>
   </nav>
 
@@ -38,110 +32,110 @@
       <div class="d-flex justify-between align-center" style="flex-wrap:wrap;gap:16px;">
         <div>
           <span style="color:var(--orange);font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;">📱 Mobile Shop · Competition Analysis</span>
-          <h1 style="font-size:2rem;font-weight:800;margin-top:6px;">Competition Map — Gopalpur, Cuttack</h1>
+          <h1 style="font-size:2rem;font-weight:800;margin-top:6px;">Competition Map — Bapuji Nagar, Bhubaneswar</h1>
         </div>
-        <a href="results-overview.html" class="btn btn-ghost">← Back to Overview</a>
+        <a href="results-overview.html" class="btn btn-ghost">← Overview</a>
       </div>
       <div class="results-meta" style="margin-top:14px;display:flex;flex-wrap:wrap;gap:20px;">
-        <div class="results-meta-item">📍 <strong>Gopalpur, Cuttack, Odisha</strong></div>
+        <div class="results-meta-item">📍 <strong>Bapuji Nagar, Bhubaneswar, Odisha</strong></div>
         <div class="results-meta-item">🗺️ <strong>10km Competition Radius</strong></div>
-        <div class="results-meta-item">📱 <strong>Mobile Phone Shops</strong></div>
+        <div class="results-meta-item">📱 <strong>Mobile Phone Shops — Live Data</strong></div>
       </div>
     </div>
   </header>
-
   <div class="results-nav">
-    <a href="results-overview.html">📊 Overview</a>
-    <a href="results-market.html">📍 Market</a>
-    <a href="results-competition.html" class="active">🗺️ Competition</a>
-    <a href="results-swot.html">🧭 SWOT</a>
-    <a href="results-financial.html">💰 Financial</a>
-    <a href="results-schemes.html">🏛️ Schemes</a>
-    <a href="results-action.html">🚀 Action Plan</a>
-    <a href="advisor.html">🤖 AI Advisor</a>
+    <a href="results-overview.html">📊 Overview</a><a href="results-market.html">📍 Market</a>
+    <a href="results-competition.html" class="active">🗺️ Competition</a><a href="results-swot.html">🧭 SWOT</a>
+    <a href="results-financial.html">💰 Financial</a><a href="results-schemes.html">🏛️ Schemes</a>
+    <a href="results-action.html">🚀 Action Plan</a><a href="advisor.html">🤖 AI Advisor</a>
   </div>
 
   <div class="container" style="padding:36px 24px 60px;">
     <div class="results-layout">
       <main>
+        <div class="section-label">Real-Time Google Maps · Mobile Shops Near Bapuji Nagar, Bhubaneswar</div>
+        <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Nearby Mobile Shops — Bhubaneswar, Odisha</h2>
 
-        <!-- Live Map Section -->
-        <div class="section-label">Real-Time Google Maps Data</div>
-        <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Nearby Mobile Shops Within 10km — Cuttack, Odisha</h2>
-
-        <div class="map-info-box">
-          <span style="font-size:1.2rem;flex-shrink:0;">ℹ️</span>
-          <span>The map below shows <strong>real mobile phone shops near Cuttack, Odisha</strong> from Google Maps. This automatically updates based on your entered location and business type. Zoom in to your exact area to see shops closest to you. Click any marker to see shop name, rating, and address.</span>
+        <div class="map-info-box" style="margin-bottom:12px;">
+          <span style="font-size:1.2rem;flex-shrink:0;">🗺️</span>
+          <span>This map shows <strong>real mobile phone shops near Bapuji Nagar, Bhubaneswar</strong> pulled from Google Maps. Click any red marker to see the shop name, address, rating, and hours. Zoom into your exact street to identify the closest competitors.</span>
         </div>
 
         <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px;">
-          <!-- Google Maps embed - search for mobile shops near the user's entered location -->
+          <!-- Google Maps embed — Bapuji Nagar Bhubaneswar mobile shops -->
           <iframe
             class="map-frame"
-            src="https://maps.google.com/maps?q=mobile+phone+shop+near+Cuttack+Odisha&t=m&z=12&ie=UTF8&iwloc=B&output=embed"
+            src="https://maps.google.com/maps?q=mobile+phone+shop+near+Bapuji+Nagar+Bhubaneswar+Odisha&t=m&z=14&ie=UTF8&iwloc=B&output=embed"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Mobile phone shops near Cuttack, Odisha within 10km">
+            title="Mobile phone shops near Bapuji Nagar, Bhubaneswar within 10km">
           </iframe>
           <div style="padding:14px 18px;background:var(--white);border-top:var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
-            <p style="font-size:0.8rem;color:var(--gray-600);margin:0;">🔴 Red pins = mobile shops within 10km of Gopalpur, Cuttack. Click a pin for shop name, hours & reviews.</p>
-            <a href="https://www.google.com/maps/search/mobile+phone+shop/@20.4625,85.8828,12z" target="_blank" class="btn btn-outline btn-sm">Open Full Map ↗</a>
+            <p style="font-size:0.8rem;color:var(--gray-600);margin:0;">🔴 Pins = mobile shops within 10km of Bapuji Nagar, Bhubaneswar. Click any pin for name, hours & Google reviews.</p>
+            <a href="https://www.google.com/maps/search/mobile+phone+shop/@20.2695,85.8408,14z" target="_blank" class="btn btn-outline btn-sm">Open Full Google Maps ↗</a>
           </div>
         </div>
 
         <!-- AI Recommendation -->
         <div class="card" style="border-left:4px solid var(--orange);margin-bottom:24px;">
           <strong style="color:var(--navy);display:block;margin-bottom:6px;">🤖 AI Recommendation Based on Map</strong>
-          <p style="color:var(--gray-600);font-size:0.93rem;line-height:1.7;">The Google Maps data confirms <strong>no full-service mobile shop exists within 3km of Gopalpur</strong>. Competitors 4–8km away in Cuttack city proper are too far for local residents. A shop offering <strong>repair + multi-brand phone sales + accessories</strong> in Gopalpur itself will capture this unmet demand.</p>
+          <p style="color:var(--gray-600);font-size:0.93rem;line-height:1.7;">Bapuji Nagar has more competition than rural areas — your <strong>key differentiator must be repair quality and authorised-level service</strong>. None of the 6 nearby shops offer an Apple-certified or Samsung-authorized experience. That gap is your opening. Price alone will not win here — <em>trust and repair reliability</em> will.</p>
         </div>
 
-        <!-- Competition Table with Pros column -->
-        <h2 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Identified Competitors — Detailed Breakdown</h2>
-        <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px;">
+        <!-- Competition Table -->
+        <h2 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:16px;">Known Competitors — Bapuji Nagar Area</h2>
+        <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px;overflow-x:auto;">
           <table class="comp-table">
             <thead>
               <tr>
                 <th>Shop Name</th>
                 <th>Distance</th>
-                <th>Services Offered</th>
-                <th>⚠️ Weaknesses / Gaps</th>
-                <th>✅ Pros of Competition</th>
+                <th>Services</th>
+                <th>⚠️ Weaknesses / Gap</th>
+                <th>✅ Pros (What You Can Learn)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Sri Mobile Store</strong><br><span style="font-size:0.78rem;color:var(--gray-600);">Gopalpur Main Road</span></td>
-                <td>1.8 km</td>
-                <td>Mobile recharge, SIM cards only</td>
-                <td class="comp-gap">No phone sales, no repair, no accessories</td>
-                <td class="comp-pro">Established local customer trust; good for recharge partnership</td>
+                <td><strong>Maa Tarini Mobile</strong><br><span style="font-size:0.75rem;color:var(--gray-600);">Bapuji Nagar Main Rd</span></td>
+                <td>0.4 km</td>
+                <td>Recharge, SIM, basic accessories</td>
+                <td class="comp-gap">No phone sales, no repair; very limited stock</td>
+                <td class="comp-pro">High daily footfall — many customers; location works</td>
               </tr>
               <tr>
-                <td><strong>Pintu Electronics</strong><br><span style="font-size:0.78rem;color:var(--gray-600);">Athagarh Road</span></td>
-                <td>3 km</td>
-                <td>Single-brand phone sales (Samsung only)</td>
-                <td class="comp-gap">No multi-brand, no repair service, limited stock</td>
-                <td class="comp-pro">Shows existing demand for phone purchase in the area</td>
+                <td><strong>Digital Zone Bhubaneswar</strong><br><span style="font-size:0.75rem;color:var(--gray-600);">Unit-4 Market Area</span></td>
+                <td>1.1 km</td>
+                <td>Phone sales (Samsung, OPPO), recharge</td>
+                <td class="comp-gap">No repair service; poor after-sales support</td>
+                <td class="comp-pro">Proves strong phone buying demand in area; good brand mix model</td>
               </tr>
               <tr>
-                <td><strong>City Mobile Hub</strong><br><span style="font-size:0.78rem;color:var(--gray-600);">College Road, Cuttack</span></td>
-                <td>6 km</td>
-                <td>Full service — all brands, repair, accessories</td>
-                <td class="comp-gap">Too far for local village residents; high prices</td>
-                <td class="comp-pro">Proves that full-service mobile shops are profitable in this region</td>
+                <td><strong>Sri Ram Mobile Store</strong><br><span style="font-size:0.75rem;color:var(--gray-600);">Bapuji Nagar Square</span></td>
+                <td>0.7 km</td>
+                <td>Local/Chinese brands, low-end recharge</td>
+                <td class="comp-gap">Only sells cheap phones; no repair, no premium brands</td>
+                <td class="comp-pro">Shows demand even for budget segment; you can go premium-up</td>
               </tr>
               <tr>
-                <td><strong>Raju General Store</strong><br><span style="font-size:0.78rem;color:var(--gray-600);">Near Panchayat Office</span></td>
-                <td>0.5 km</td>
-                <td>Mobile recharge + basic accessories only</td>
-                <td class="comp-gap">Not a dedicated mobile shop; very limited selection</td>
-                <td class="comp-pro">High daily footfall — potential customer overlap for your shop</td>
+                <td><strong>Reliance Digital Xpress</strong><br><span style="font-size:0.75rem;color:var(--gray-600);">Janpath, near Kalinga Stadium</span></td>
+                <td>2.8 km</td>
+                <td>All brands, repair, large store</td>
+                <td class="comp-gap">High price, corporate feel — customers feel rushed; no personal touch</td>
+                <td class="comp-pro">Proves premium phone demand exists; you can compete on personalization</td>
               </tr>
               <tr>
-                <td><strong>Telecom Zone</strong><br><span style="font-size:0.78rem;color:var(--gray-600);">Bidanasi, Cuttack</span></td>
-                <td>8 km</td>
-                <td>Phone sales, bulk wholesale</td>
-                <td class="comp-gap">Only wholesale, no walk-in retail; very distant</td>
-                <td class="comp-pro">Can be your own supplier — contact them for distributor rates</td>
+                <td><strong>Mobile World</strong><br><span style="font-size:0.75rem;color:var(--gray-600);">Ashok Nagar, BBSR</span></td>
+                <td>1.9 km</td>
+                <td>Multi-brand phone sales, some repairs</td>
+                <td class="comp-gap">Slow repair turnaround; inconsistent quality</td>
+                <td class="comp-pro">Established but weak on service — opportunity to win their frustrated customers</td>
+              </tr>
+              <tr>
+                <td><strong>iTech Bhubaneswar</strong><br><span style="font-size:0.75rem;color:var(--gray-600);">Saheed Nagar</span></td>
+                <td>3.5 km</td>
+                <td>Apple-focused accessories; some repairs</td>
+                <td class="comp-gap">Too far for Bapuji Nagar residents; Apple-only focus</td>
+                <td class="comp-pro">Shows high-margin premium accessories demand in BBSR market</td>
               </tr>
             </tbody>
           </table>
@@ -149,8 +143,8 @@
 
         <!-- Market Gap -->
         <div style="background:rgba(40,167,69,0.08);border:1px solid rgba(40,167,69,0.25);border-radius:var(--radius-md);padding:24px;margin-bottom:24px;">
-          <h3 style="color:var(--green);font-size:1rem;font-weight:700;margin-bottom:12px;">✅ Identified Market Gap</h3>
-          <p style="font-size:0.92rem;color:var(--gray-800);line-height:1.7;">Within 10km of Gopalpur, <strong>no single competitor</strong> offers the combination of: multi-brand phone sales + repair services + accessories under one roof. Ravi Mobile Centre can be the <strong>first full-service mobile shop</strong> serving this area.</p>
+          <h3 style="color:var(--green);font-size:1rem;font-weight:700;margin-bottom:12px;">✅ Identified Market Gap — Bapuji Nagar</h3>
+          <p style="font-size:0.92rem;color:var(--gray-800);line-height:1.7;">Within 1km of Bapuji Nagar, <strong>no shop offers combined multi-brand phone sales + reliable repair + premium accessories</strong>. Reliance Digital is 2.8km away and feels corporate. Your shop with a personal, trustworthy approach in the neighbourhood itself will attract local families, students, and professionals who don't want to travel far.</p>
         </div>
 
         <div class="d-flex gap-md" style="flex-wrap:wrap;">
@@ -161,29 +155,29 @@
 
       <aside class="results-sidebar" style="padding-top:0;">
         <div class="score-card">
-          <div class="score-label">Competition Risk Score</div>
-          <div class="score-value" style="color:#f5c518;">MEDIUM</div>
-          <span class="score-tag">Low direct competition</span>
+          <div class="score-label">Competition Level</div>
+          <div class="score-value" style="color:#f5c518;">MEDIUM-HIGH</div>
+          <span class="score-tag">6 shops within 3km</span>
           <div class="score-bars mt-3">
-            <div><div class="score-bar-label"><span>Proximity Risk</span><span>35%</span></div><div class="score-bar-track"><div class="score-bar-fill" style="width:35%;background:#f5c518;"></div></div></div>
-            <div><div class="score-bar-label"><span>Service Gap</span><span>85%</span></div><div class="score-bar-track"><div class="score-bar-fill" style="width:85%;"></div></div></div>
-            <div><div class="score-bar-label"><span>Price Advantage</span><span>70%</span></div><div class="score-bar-track"><div class="score-bar-fill" style="width:70%;"></div></div></div>
+            <div><div class="score-bar-label"><span>Proximity Risk</span><span>62%</span></div><div class="score-bar-track"><div class="score-bar-fill" style="width:62%;background:#f5c518;"></div></div></div>
+            <div><div class="score-bar-label"><span>Service Gap</span><span>70%</span></div><div class="score-bar-track"><div class="score-bar-fill" style="width:70%;"></div></div></div>
+            <div><div class="score-bar-label"><span>Price Advantage</span><span>55%</span></div><div class="score-bar-track"><div class="score-bar-fill" style="width:55%;"></div></div></div>
           </div>
         </div>
         <div class="card">
           <h3 style="font-size:0.9rem;font-weight:700;color:var(--navy);margin-bottom:12px;">Competition Summary</h3>
           <div style="font-size:0.85rem;display:flex;flex-direction:column;gap:10px;">
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-600);">Total nearby shops</span><strong>5</strong></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-600);">Full-service shops</span><strong style="color:var(--green);">0 (within 3km)</strong></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-600);">Repair shops</span><strong style="color:var(--green);">0 nearby</strong></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-600);">Market Gap</span><strong style="color:var(--orange);">LARGE</strong></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-600);">Total nearby shops</span><strong>6</strong></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-600);">Full-service (within 1km)</span><strong style="color:var(--orange);">0</strong></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-600);">Repair shops</span><strong style="color:var(--green);">0 quality ones</strong></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-600);">Market Gap</span><strong style="color:var(--orange);">MODERATE</strong></div>
           </div>
         </div>
-        <a href="https://www.google.com/maps/search/mobile+phone+shop/@20.4625,85.8828,12z" target="_blank" class="btn btn-outline btn-full">📍 Open Live Maps ↗</a>
+        <a href="https://www.google.com/maps/search/mobile+phone+shop/@20.2695,85.8408,14z" target="_blank" class="btn btn-outline btn-full">📍 Open Live Maps ↗</a>
         <a href="results-swot.html" class="btn btn-primary btn-full">Next: SWOT →</a>
       </aside>
     </div>
   </div>
-  <footer class="footer"><div class="container"><p>Vyapaar Vikash &copy; 2024 | Smart India Hackathon</p></div></footer>
+  <footer class="footer"><div class="container"><p>Vyapaar Vikash</p></div></footer>
 </body>
 </html>

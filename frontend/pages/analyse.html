@@ -12,14 +12,8 @@
       gap: 12px;
       margin-bottom: 6px;
     }
-    .business-type-option {
-      position: relative;
-    }
-    .business-type-option input[type="radio"] {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-    }
+    .business-type-option { position: relative; }
+    .business-type-option input[type="radio"] { position: absolute; opacity: 0; width: 0; }
     .business-type-option label {
       display: flex;
       flex-direction: column;
@@ -43,26 +37,25 @@
       background: var(--orange-light);
       color: var(--orange);
     }
-    .business-type-option label:hover {
-      border-color: var(--orange);
-      color: var(--orange);
+    .business-type-option label:hover { border-color: var(--orange); color: var(--orange); }
+    .demo-banner {
+      background: linear-gradient(135deg, #0f2b46, #1a3a5c);
+      color: white;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.88rem;
     }
-    .other-desc-box {
-      margin-top: 10px;
-    }
-    @media (max-width: 600px) {
-      .business-type-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 600px) { .business-type-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
-
   <nav class="navbar">
     <div class="navbar-inner">
-      <a href="../index.html" class="logo">
-        <div class="logo-icon">🌱</div>
-        Vyapaar Vikash
-      </a>
+      <a href="../index.html" class="logo"><div class="logo-icon">🌱</div>Vyapaar Vikash</a>
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="analyze.html" class="active">Business Analysis</a></li>
@@ -76,20 +69,11 @@
   <header class="page-analyze-header">
     <div class="container">
       <div class="step-indicator">
-        <div class="step">
-          <div class="step-num active">1</div>
-          <span class="step-name">Business Details</span>
-        </div>
+        <div class="step"><div class="step-num active">1</div><span class="step-name">Business Details</span></div>
         <div class="step-sep"></div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <span class="step-name">Location & Finance</span>
-        </div>
+        <div class="step"><div class="step-num">2</div><span class="step-name">Location & Finance</span></div>
         <div class="step-sep"></div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <span class="step-name">Results & Report</span>
-        </div>
+        <div class="step"><div class="step-num">3</div><span class="step-name">Results & Report</span></div>
       </div>
       <h1>Analyze Your Business Idea</h1>
       <p>Select your business type, fill in location, and get a hyper-local market analysis, financial report, SWOT, and matched government schemes.</p>
@@ -98,7 +82,6 @@
 
   <div class="container">
     <div class="analyze-layout">
-
       <aside class="form-sidebar">
         <div class="form-sidebar-header">Form Sections</div>
         <nav class="form-sidebar-links">
@@ -111,18 +94,25 @@
       </aside>
 
       <main>
+        <!-- Demo Banner -->
+        <div class="demo-banner">
+          <span style="font-size:1.4rem;flex-shrink:0;">🎯</span>
+          <div>
+            <strong>Demo Mode:</strong> This form is pre-filled with a sample input — <strong>Mobile Shop, Bapuji Nagar, Bhubaneswar</strong>. In the live version, users fill this themselves and the results will dynamically update. Click <em>Generate Analysis Report</em> to see the demo output.
+          </div>
+        </div>
+
         <form action="results-overview.html" method="GET" id="analyze-form">
 
-          <!-- SECTION 1: Business Type Selector -->
+          <!-- SECTION 1: Business Type -->
           <div class="form-main" id="section-type" style="margin-bottom:24px;">
             <div class="form-section">
               <h2 class="form-section-title">🏷️ What Type of Business Do You Want to Start?</h2>
-              <p class="form-section-sub">Choose your business type from the list below. Select "Other" to describe your unique idea.</p>
+              <p class="form-section-sub">Choose your business type. Select "Other" to describe your unique idea.</p>
 
-              <!-- Common Business Types as Radio Cards -->
               <div class="business-type-grid">
                 <div class="business-type-option">
-                  <input type="radio" id="type_mobile" name="business_type" value="mobile_shop">
+                  <input type="radio" id="type_mobile" name="business_type" value="mobile_shop" checked>
                   <label for="type_mobile"><span class="icon">📱</span>Mobile Shop</label>
                 </div>
                 <div class="business-type-option">
@@ -170,33 +160,31 @@
                   <label for="type_other"><span class="icon">✏️</span>Other (Describe)</label>
                 </div>
               </div>
-              <p class="form-hint" style="margin-top:8px;">* Select the category that best fits your business idea.</p>
+              <p class="form-hint" style="margin-top:8px;">* <strong>Mobile Shop</strong> pre-selected for demo.</p>
 
-              <!-- "Other" Description Box — always shown, required if "Other" selected -->
-              <div class="other-desc-box">
-                <label class="form-label" for="business_other_desc">If "Other", describe your business idea below:</label>
-                <textarea id="business_other_desc" name="business_other_desc" class="form-control" placeholder="Example: I want to start a small fish-processing unit near the river..."></textarea>
-                <p class="form-hint">Leave blank if you selected a category above.</p>
+              <div class="form-group mt-2" style="margin-top:16px;">
+                <label class="form-label" for="business_other_desc">If "Other", describe your business idea:</label>
+                <textarea id="business_other_desc" name="business_other_desc" class="form-control" placeholder="Leave blank if you selected a category above..."></textarea>
               </div>
 
-              <div class="form-group mt-2">
+              <div class="form-group mt-2" style="margin-top:16px;">
                 <label class="form-label" for="business_name">Proposed Business Name <span class="required">*</span></label>
-                <input type="text" id="business_name" name="business_name" class="form-control" placeholder="E.g., Ravi Mobile Centre" required>
+                <input type="text" id="business_name" name="business_name" class="form-control" value="Suresh Mobile Point" required>
               </div>
             </div>
           </div>
 
-          <!-- SECTION 2: Location -->
+          <!-- SECTION 2: Location — Pre-filled for demo -->
           <div class="form-main" id="section-location" style="margin-bottom:24px;">
             <div class="form-section">
               <h2 class="form-section-title">📍 Business Location</h2>
-              <p class="form-section-sub">Your location is used to find real nearby competitors and analyze the local market within a 5–10 km radius.</p>
+              <p class="form-section-sub">Your location is used to find real nearby competitors within a 5–10 km radius on Google Maps.</p>
 
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="state">State <span class="required">*</span></label>
                   <select id="state" name="state" class="form-control" required>
-                    <option value="" disabled selected>-- Select State --</option>
+                    <option value="" disabled>-- Select State --</option>
                     <option value="AP">Andhra Pradesh</option>
                     <option value="AR">Arunachal Pradesh</option>
                     <option value="AS">Assam</option>
@@ -215,7 +203,7 @@
                     <option value="ML">Meghalaya</option>
                     <option value="MZ">Mizoram</option>
                     <option value="NL">Nagaland</option>
-                    <option value="OD">Odisha</option>
+                    <option value="OD" selected>Odisha</option>
                     <option value="PB">Punjab</option>
                     <option value="RJ">Rajasthan</option>
                     <option value="SK">Sikkim</option>
@@ -229,45 +217,45 @@
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="district">District <span class="required">*</span></label>
-                  <input type="text" id="district" name="district" class="form-control" placeholder="E.g., Cuttack" required>
+                  <input type="text" id="district" name="district" class="form-control" value="Khurda" required>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="block">Block / Taluk</label>
-                  <input type="text" id="block" name="block" class="form-control" placeholder="E.g., Athagarh">
+                  <input type="text" id="block" name="block" class="form-control" value="Bhubaneswar Urban">
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="village">Village / Town / Ward <span class="required">*</span></label>
-                  <input type="text" id="village" name="village" class="form-control" placeholder="E.g., Gopalpur" required>
+                  <input type="text" id="village" name="village" class="form-control" value="Bapuji Nagar, Bhubaneswar" required>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="area_type">Area Type <span class="required">*</span></label>
                 <select id="area_type" name="area_type" class="form-control" required>
-                  <option value="" disabled selected>-- Select Area Type --</option>
+                  <option value="" disabled>-- Select Area Type --</option>
                   <option value="rural">Rural (Village)</option>
-                  <option value="semi_urban">Semi-Urban (Small Town)</option>
+                  <option value="semi_urban" selected>Semi-Urban (Small Town)</option>
                   <option value="urban_outskirts">Urban Outskirts</option>
                 </select>
               </div>
             </div>
           </div>
 
-          <!-- SECTION 3: Business Stage & Customers -->
+          <!-- SECTION 3: Business Stage -->
           <div class="form-main" id="section-category" style="margin-bottom:24px;">
             <div class="form-section">
               <h2 class="form-section-title">📋 Business Stage & Customers</h2>
-              <p class="form-section-sub">This helps us identify the most relevant market analysis and government schemes.</p>
+              <p class="form-section-sub">Helps identify relevant market analysis and government schemes.</p>
 
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="business_stage">Business Stage <span class="required">*</span></label>
                   <select id="business_stage" name="business_stage" class="form-control" required>
-                    <option value="" disabled selected>-- Select Stage --</option>
-                    <option value="new">New Business (Starting Fresh)</option>
+                    <option value="" disabled>-- Select Stage --</option>
+                    <option value="new" selected>New Business (Starting Fresh)</option>
                     <option value="existing">Existing Business (Expanding)</option>
                     <option value="idea">Idea Stage (Early Planning)</option>
                   </select>
@@ -275,43 +263,43 @@
                 <div class="form-group">
                   <label class="form-label" for="target_customers">Target Customers <span class="required">*</span></label>
                   <select id="target_customers" name="target_customers" class="form-control" required>
-                    <option value="" disabled selected>-- Select --</option>
+                    <option value="" disabled>-- Select --</option>
                     <option value="households">Local Households</option>
                     <option value="retailers">Retail Shops / Businesses</option>
                     <option value="students">Students / Youth</option>
                     <option value="institutions">Institutions (Schools, Offices)</option>
-                    <option value="mixed">Mixed (Multiple Segments)</option>
+                    <option value="mixed" selected>Mixed (Multiple Segments)</option>
                   </select>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SECTION 4: Financial Details -->
+          <!-- SECTION 4: Financial -->
           <div class="form-main" id="section-finance" style="margin-bottom:24px;">
             <div class="form-section">
               <h2 class="form-section-title">💰 Financial Details</h2>
-              <p class="form-section-sub">Enter your investment details to get accurate projections.</p>
+              <p class="form-section-sub">Enter your investment to get accurate projections and scheme eligibility.</p>
 
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="total_investment">Total Planned Investment (₹) <span class="required">*</span></label>
-                  <input type="number" id="total_investment" name="total_investment" class="form-control" placeholder="E.g., 500000" min="1000" required>
+                  <input type="number" id="total_investment" name="total_investment" class="form-control" value="400000" required>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="own_capital">Your Own Capital (₹) <span class="required">*</span></label>
-                  <input type="number" id="own_capital" name="own_capital" class="form-control" placeholder="E.g., 200000" min="0" required>
+                  <input type="number" id="own_capital" name="own_capital" class="form-control" value="150000" required>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="monthly_expenses">Estimated Monthly Expenses (₹)</label>
-                  <input type="number" id="monthly_expenses" name="monthly_expenses" class="form-control" placeholder="E.g., 30000" min="0">
+                  <input type="number" id="monthly_expenses" name="monthly_expenses" class="form-control" value="40000">
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="expected_revenue">Expected Monthly Revenue (₹)</label>
-                  <input type="number" id="expected_revenue" name="expected_revenue" class="form-control" placeholder="E.g., 55000" min="0">
+                  <input type="number" id="expected_revenue" name="expected_revenue" class="form-control" value="70000">
                 </div>
               </div>
 
@@ -319,14 +307,14 @@
                 <div class="form-group">
                   <label class="form-label" for="loan_required">Do You Need a Loan?</label>
                   <select id="loan_required" name="loan_required" class="form-control">
-                    <option value="no" selected>No, I have sufficient capital</option>
-                    <option value="yes">Yes, I need a loan</option>
+                    <option value="no">No, I have sufficient capital</option>
+                    <option value="yes" selected>Yes, I need a loan</option>
                     <option value="maybe">Not sure yet</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="loan_amount">Loan Amount Required (₹)</label>
-                  <input type="number" id="loan_amount" name="loan_amount" class="form-control" placeholder="E.g., 300000" min="0">
+                  <input type="number" id="loan_amount" name="loan_amount" class="form-control" value="250000">
                 </div>
               </div>
             </div>
@@ -342,8 +330,8 @@
                 <div class="form-group">
                   <label class="form-label" for="gender">Gender <span class="required">*</span></label>
                   <select id="gender" name="gender" class="form-control" required>
-                    <option value="" disabled selected>-- Select --</option>
-                    <option value="male">Male</option>
+                    <option value="" disabled>-- Select --</option>
+                    <option value="male" selected>Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other / Prefer not to say</option>
                   </select>
@@ -351,8 +339,8 @@
                 <div class="form-group">
                   <label class="form-label" for="category">Social Category <span class="required">*</span></label>
                   <select id="category" name="category" class="form-control" required>
-                    <option value="" disabled selected>-- Select Category --</option>
-                    <option value="general">General</option>
+                    <option value="" disabled>-- Select Category --</option>
+                    <option value="general" selected>General</option>
                     <option value="obc">OBC</option>
                     <option value="sc">SC</option>
                     <option value="st">ST</option>
@@ -365,11 +353,11 @@
                 <div class="form-group">
                   <label class="form-label" for="education">Education Level</label>
                   <select id="education" name="education" class="form-control">
-                    <option value="" disabled selected>-- Select --</option>
+                    <option value="" disabled>-- Select --</option>
                     <option value="no_formal">No Formal Education</option>
                     <option value="primary">Primary School</option>
                     <option value="secondary">Secondary (Class 10)</option>
-                    <option value="higher_secondary">Higher Secondary (Class 12)</option>
+                    <option value="higher_secondary" selected>Higher Secondary (Class 12)</option>
                     <option value="graduate">Graduate</option>
                   </select>
                 </div>
@@ -386,7 +374,7 @@
 
             <div class="form-actions">
               <a href="../index.html" class="btn btn-outline">Cancel</a>
-              <a href="advisor.html" class="btn btn-outline">🤖 Ask AI Advisor Instead</a>
+              <a href="advisor.html" class="btn btn-outline">🤖 Ask AI Advisor</a>
               <button type="submit" class="btn btn-primary btn-lg">Generate Analysis Report →</button>
             </div>
           </div>
@@ -398,9 +386,8 @@
 
   <footer class="footer">
     <div class="container">
-      <p>Vyapaar Vikash &copy; 2024 | Smart India Hackathon | <a href="login.html">Login</a></p>
+      <p>Vyapaar Vikash<a href="login.html">Login</a></p>
     </div>
   </footer>
-
 </body>
 </html>
